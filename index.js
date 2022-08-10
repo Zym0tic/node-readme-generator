@@ -42,10 +42,10 @@ const questions = [
 // TODO: Create a function to initialize app
 function init() {
   inquirer.prompt(questions)
-  .then((answers) => {
-    const readmePageContent = generateMarkdown(answers);
+  .then((response) => {
+    const readmePageContent = generateMarkdown(response);
 
-    fs.writeToFile("readme.md", readmePageContent, (err) =>
+    fs.writeFile("./generated-readmes/readme.md", readmePageContent, (err) =>
       err ? console.log(err) : console.log("sucessfuly created readme!")
     );
   });

@@ -16,9 +16,9 @@ const questions = [
     message: "Write a description of your application.",
   },
   {
-    type:"input",
+    type: "input",
     name: "installation",
-    message: "Provide instructions for installing the application."
+    message: "Provide instructions for installing the application.",
   },
   {
     type: "input",
@@ -32,25 +32,23 @@ const questions = [
   },
   {
     type: "input",
-    name:"testInstructions",
-    message: "provide instructions for testing the application"
-  }
+    name: "testInstructions",
+    message: "provide instructions for testing the application",
+  },
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    // fs.appendFile('readme.md', `$(response[1])`);
-
-}
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer
-    .prompt(questions)
-    .then((answer) => {
-        return writeToFile();
-        
-    })
+  inquirer.prompt(questions)
+  .then((answers) => {
+    const readmePageContent = generateMarkdown(answers);
+
+    fs.writeToFile("readme.md", readmePageContent, (err) =>
+      err ? console.log(err) : console.log("sucessfuly created readme!")
+    );
+  });
 }
 
 // Function call to initialize app

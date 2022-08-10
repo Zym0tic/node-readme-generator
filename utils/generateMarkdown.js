@@ -24,6 +24,7 @@ function generateMarkdown(data) {
   ## Test Instructions \n
   ${data.testInstructions}
 `;
+   return data;
 }
 
 module.exports = generateMarkdown;

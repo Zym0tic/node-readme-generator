@@ -13,7 +13,7 @@ function renderLicenseBadge(license) {
   } else {
     yourLicense = ""
   }
-  console.log(yourLicense);
+  console.log(license.license);
   return yourLicense;
 }
  
@@ -48,7 +48,7 @@ function generateMarkdown(data) {
   ## Test Instructions \n
   ${data.testInstructions}\n\n
   ## license \n
-  ${renderLicenseBadge(data.license)}\n\n
+  ${(data.license)}\n\n
   ## Questions \n
   If you have any questions or want to get in touch you can contact me through email\n
   E-mail: ${data.email}\n

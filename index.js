@@ -2,6 +2,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown.js");
+const renderLicenseBadge = require("./utils/generateMarkdown.js");
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -35,6 +36,22 @@ const questions = [
     name: "testInstructions",
     message: "provide instructions for testing the application",
   },
+  {
+    type: "input",
+    name: "githubUserName",
+    message: "Provide your Github Username."
+  },
+  {
+    type: "input",
+    name: "email",
+    message: "Provide your Email address."
+  },
+  {
+    type: "checkbox",
+    name: "license",
+    message: "which license do you want to add?",
+    choices: ["MIT", "GPlv3", "GPL"],
+  }
 ];
 
 // TODO: Create a function to write README file
@@ -43,6 +60,7 @@ const questions = [
 function init() {
   inquirer.prompt(questions)
   .then((response) => {
+    renderLicenseBadge(response);
     const readmePageContent = generateMarkdown(response);
 
     fs.writeFile("./generated-readmes/readme.md", readmePageContent, (err) =>

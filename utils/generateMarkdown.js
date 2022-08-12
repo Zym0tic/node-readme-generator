@@ -48,7 +48,7 @@ function generateMarkdown(data) {
   ## Test Instructions \n
   ${data.testInstructions}\n\n
   ## license \n
-  ${(data.license)}\n\n
+  ${data.license}\n\n
   ## Questions \n
   If you have any questions or want to get in touch you can contact me through email\n
   E-mail: ${data.email}\n

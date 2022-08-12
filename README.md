@@ -1,4 +1,4 @@
-# f
+# node-readme-generator
 
 
   ## Table of Contents:
@@ -10,27 +10,29 @@
   7. [Questions](#questions)
   ## Description 
 
-  f
+  A readme generator created with node.js. follow prompts in the terminal to generate a readme quickly.
 
 
   ## Installation 
 
-  f
+  clone the repo. you must have node installed as well. 
+  https://github.com/Zym0tic/node-readme-generator
 
 
   ## Usage 
 
-  f 
+  a link to the video walkthrough:
+  https://youtu.be/qi6OkSmWSLY
 
 
   ## Contribution Guidelines 
 
-  f
+  none
 
 
   ## Test Instructions 
 
-  f
+  none
 
 
   ## license 
@@ -42,8 +44,8 @@
 
   If you have any questions or want to get in touch you can contact me through email
 
-  E-mail: f
+  E-mail: lukerozon@gmail.com
 
-  Github: https://www.github.com/f
+  Github: https://www.github.com/zym0tic
 
 

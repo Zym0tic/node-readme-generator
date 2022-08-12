@@ -47,7 +47,7 @@ const questions = [
     message: "Provide your Email address."
   },
   {
-    type: "checkbox",
+    type: "list",
     name: "license",
     message: "which license do you want to add?",
     choices: ["MIT", "GPlv3", "GPL"],
@@ -63,7 +63,7 @@ function init() {
     renderLicenseBadge(response);
     const readmePageContent = generateMarkdown(response);
 
-    fs.writeFile("./generated-readmes/readme.md", readmePageContent, (err) =>
+    fs.writeFile("./generated-readmes/README.md", readmePageContent, (err) =>
       err ? console.log(err) : console.log("sucessfuly created readme!")
     );
   });
